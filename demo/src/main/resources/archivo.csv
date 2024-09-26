@@ -1,0 +1,4 @@
+NumeroCuenta,NumeroLlamante,NumeroReceptor,Timestamp,DuracionMinutos,TarifaPorMinuto,Categoria
+50681517,555-4132,555-4554,26/07/2024 16:02:00,18,0.08,internacional
+50681518,555-1234,555-5678,27/07/2024 14:05:00,10,0.05,nacional
+50681519,555-9876,555-4321,28/07/2024 18:30:00,20,0.10,nacional

@@ -20,7 +20,7 @@ public class CDR {
         this.categoria = categoria;
     }
 
-    // Getters para acceder a los datos
+    // Getters
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -33,6 +33,7 @@ public class CDR {
         return tarifaPorMinuto;
     }
 
+    @Override
     public String toString() {
         return numeroCuenta + "," + numeroLlamante + "," + numeroReceptor + "," + timestamp + "," + duracionMinutos + "," + tarifaPorMinuto + "," + categoria;
     }
