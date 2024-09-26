@@ -1,13 +1,15 @@
 package com.example;
 
 public class CDR {
-    private String numeroCuenta;
+
+    //cración de variables en donde se agurdara la información de las llamadas
+    private String numeroCuenta; //numero de inentificación de la llamada
     private String numeroLlamante;
     private String numeroReceptor;
-    private String timestamp;
+    private String timestamp; //fecha de cuando se hizo la llamada
     private int duracionMinutos;
     private double tarifaPorMinuto;
-    private String categoria;
+    private String categoria; //guardaremos la información de la llamada si es nacional o internacional
 
     // Constructor
     public CDR(String numeroCuenta, String numeroLlamante, String numeroReceptor, String timestamp, int duracionMinutos, double tarifaPorMinuto, String categoria) {
@@ -20,7 +22,7 @@ public class CDR {
         this.categoria = categoria;
     }
 
-    // Getters
+    //funciones para poder pedri información de lo que te tenemos en nuestras variables
     public String getNumeroCuenta() {
         return numeroCuenta;
     }
@@ -33,6 +35,7 @@ public class CDR {
         return tarifaPorMinuto;
     }
 
+    // en este metodo convertimos nuestra información de las varibles en una cadena de texto y las mostramos en consola
     @Override
     public String toString() {
         return numeroCuenta + "," + numeroLlamante + "," + numeroReceptor + "," + timestamp + "," + duracionMinutos + "," + tarifaPorMinuto + "," + categoria;

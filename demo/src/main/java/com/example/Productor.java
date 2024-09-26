@@ -5,11 +5,11 @@ import java.io.FileReader;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
-public class Productor implements Runnable {
+public class Productor implements Runnable { //Runnable nos permitirá usar la clase Productor en un hilo
     private final BufferCompartido<CDR> buffer;
     private final String archivoCSV;
 
-    // Constructor que usa el ClassLoader para obtener la ruta del archivo CSV
+    // Constructor  para obtener la ruta del archivo CSV
     public Productor(BufferCompartido<CDR> buffer) {
         this.buffer = buffer;
         // Obtener la ruta del archivo CSV usando el ClassLoader
