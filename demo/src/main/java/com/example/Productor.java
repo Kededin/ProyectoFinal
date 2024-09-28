@@ -33,7 +33,7 @@ public class Productor implements Runnable { //Runnable nos permitirá usar la c
                 CDR cdr = new CDR(datos[0], datos[1], datos[2], datos[3], Integer.parseInt(datos[4]), Double.parseDouble(datos[5]), datos[6]);
 
                 // Poner el CDR en el buffer
-                buffer.poner(cdr);
+                buffer.poner(cdr);//este metodo esperara hasta que haya un espacio en el buffer compartido
                 System.out.println("Productor añadió: " + cdr.toString());
                 Thread.sleep(1000);  // Simula tiempo de producción
             }
