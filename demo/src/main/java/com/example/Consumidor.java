@@ -15,12 +15,12 @@ public class Consumidor implements Runnable {
     @Override
     public void run() {
         // Conectar a MySQL (XAMPP)
-        try (Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/cdr_db", "root", "")) {  // Conexión con MySQL, sin contraseña por defecto
-            String sql = "INSERT INTO registros_cdr (numero_cuenta, duracion, tarifa_total) VALUES (?, ?, ?)";
-            PreparedStatement statement = conexion.prepareStatement(sql);
+        try (Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/cdr_db", "root", "")) {  // Conexión con MySQL
+            String sql = "INSERT INTO registros_cdr (numero_cuenta, duracion, tarifa_total) VALUES (?, ?, ?)";//creamo una consulta que ará las inseriones a la bsa de datos 
+            PreparedStatement statement = conexion.prepareStatement(sql); //podremos generar la consultas en su devido tiempo
 
             while (true) {
-                // Tomar un CDR del buffer
+                // Tomar un CDR del buffer que el productor colocó
                 CDR cdr = buffer.tomar();
 
                 // Calcular la tarifa total
